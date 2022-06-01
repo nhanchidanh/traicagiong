@@ -6,6 +6,10 @@ const fakeLogin = [
     {
         username: "username2",
         password: "password2"
+    },
+    {
+        username: "admin",
+        password: "admin"
     }
 ]
 
