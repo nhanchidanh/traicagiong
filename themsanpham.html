@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm Sản Phẩm</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <header>
+    <div id="main-header">
+      <a href="trangchu.html"><img id="logo-header" src="./img/logo_tieungu.png" alt="#"></a>
+      <div id="title-header">TRẠI CÁ GIỐNG TIỂU NGƯ</div>
+    </div>
+  </header>
+
+  <nav>
+    <div>
+      <ul>
+        <li><a href="trangchu.html">Trang Chủ</a></li>
+        <li><a href="gioithieu.html">Giới Thiệu</a></li>
+        <li><a href="sanpham.html">Sản Phẩm</a></li>
+        <li><a href="lienhe.html">Liên Hệ</a></li>
+        <li><a href="dangnhap.html">Đăng Nhập</a></li>
+        <li><a href="dangky.html">Đăng Ký</a></li>
+      </ul>
+    </div>
+    <div id="header-search">
+      <input type="search" placeholder="Nhập sản phẩm cần tìm">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="group-box margin-y">
+        <div class="title center"><b>THÊM SẢN PHẨM</b></div>
+        <div class="content1">
+          <div class="contact">
+            <!-- <form action="#" method="post" id="form" onsubmit="return logged(this);"> -->
+            <table>
+              <tr>
+                <td>Tên Sản Phẩm:</td>
+                <td>
+                  <input type="text" required placeholder="Vd: Cá rô" name="tensanpham" id="tensanpham">
+                </td>
+              </tr>
+              <tr>
+                <td>Loại Sản Phẩm:</td>
+                <td>
+                  <select id="loaisanpham" required>
+                    <option value="">--chọn--</option>
+                    <option value="caro">Cá rô</option>
+                    <option value="cadieuhong">Cá diêu hồng</option>
+                    <option value="cathatlat">Cá thát lác</option>
+                    <option value="caloc">Cá lóc</option>
+                    <option value="cavo">Cá vồ</option>
+                    <option value="catre">Cá trê</option>
+                    <option value="cachot">Cá chốt</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Số Lượng:</td>
+                <td><input id="soluong" required pattern="\d" min="0" type="number" name="soluong"></td>
+              </tr>
+              <tr>
+                <td>Đơn Giá:</td>
+                <td><input id="dongia" required pattern="\d" placeholder="VND" type="number" name="dongia" </td>
+              </tr>
+              <tr>
+                <td>Hình Ảnh:</td>
+                <td><input id="hinhanh" required type="file" name="hinhanh" onchange="handleChangeInputFileImg(event);">
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button type="reset">Hủy</button>
+                  <button id="btnSubmit" type="submit">Thêm</button>
+                </td>
+              </tr>
+            </table>
+            <!-- </form> -->
+
+          </div>
+        </div>
+
+        <div class="list-product">
+          <table class="list" border="1" id="list">
+            <tr style="background-color: steelblue; color: white;">
+              <th>Mã SP</th>
+              <th>Tên SP</th>
+              <th>Loại SP</th>
+              <th>Số lượng</th>
+              <th>Đơn giá</th>
+              <th>Hình ảnh</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-content-item">
+        <div class="footer-content-img">
+          <img src="img/logo_tieungu.png" alt="">
+        </div>
+        <p>TIỂU NGƯ  - BẠN CỦA MỌI NHÀ NÔNG</p>
+      </div>
+      <div class="footer-content-item">
+        <div class="footer-content-item-title">
+          <span>THÔNG TIN LIÊN HỆ</span>
+          <p>Bà con có thắc mắc về kỹ thuật nuôi cá, kỹ thuật nuôi ếch, baba, lươn,.. hoặc muốn đặt giống về
+            nuôi thì
+            vui lòng liên hệ:</p>
+          <ul class="footer-content-item-list">
+            <li>Hotline: 0123456789</li>
+            <li>Email:2HDteam@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-content-item">
+        <div class="footer-content-item-title">
+          <span>ĐỊA CHỈ CÁC CƠ SỞ CỦA TRẠI GIỐNG</span>
+          <ul class="footer-content-item-list">
+            <li>Cơ sở 1: Số 411 Đường 30 Tháng 4, Hưng Lợi, Ninh Kiều, Cần Thơ</li>
+            <li>Cơ sở 2: 3/2 Xuân Khánh, Ninh Kiều, Cần Thơ</li>
+            <li>Cơ sở 3: 1 Đ. Lý Tự Trọng, An Lạc, Ninh Kiều, Cần Thơ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-content-item">
+        <div class="footer-content-item-title">
+          <span>HỖ TRỢ KHÁCH HÀNG</span>
+          <ul class="footer-content-item-list">
+            <li>Hướng dẫn mua hàng</li>
+            <li>Hướng dẫn thanh toán</li>
+            <li>Tư vấn khách hàng</li>
+            <li>Kiểm tra đơn hàng</li>
+            <li>Chính sách bảo mật</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="the-end">
+    <div class="copyright">
+      Copyright &copy; 2022 Designed by 2HD TEAM
+    </div>
+    <div class="footer-content-icon">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram-square"></i></a>
+    </div>
+  </div>
+
+  <a href="#logo-header">
+    <img src="img/backtotop.png" alt="backtotop" id="backtotop">
+  </a>
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
